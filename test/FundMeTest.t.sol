@@ -5,11 +5,13 @@ import {Test, console} from "forge-std/Test.sol";
 import {FundMe} from "../src/FundMe.sol";
 import {DeployFundMe} from "../script/DeployFundMe.s.sol";
 import {MockV3Aggregator} from "../test/mocks/MockV3Aggregator.sol";
+import {HelperConfig} from "../script/HelperConfig.s.sol";
 
 // MockV3Aggregator constant mockFeed;
 
 contract FundMeTest is Test {
     FundMe fundMe;
+    HelperConfig helperConfig;
     address USER = makeAddr("user");
     uint256 TO_SEND = 0.1 ether;
     uint256 STARTING_BALANCE = 1 ether;
